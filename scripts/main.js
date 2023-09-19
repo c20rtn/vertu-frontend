@@ -1,5 +1,6 @@
 const mobileMenuButton = document.getElementById("mobileMenuButton"),
     mobileOverlayClose = document.getElementById("mobileOverlayClose"),
+    searchIcon = document.getElementById("searchIcon"),
     closeSearchModal = document.getElementsByClassName("close")[0],
     modal = document.getElementById('searchModal');
 
