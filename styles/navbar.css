@@ -1,0 +1,140 @@
+/* NAV BAR */
+.mobile-search-button,
+.mobile-menu,
+.mobile-menu-close {
+    display: none
+}
+
+.nav-wrapper {
+    width: 100%;
+    max-width: 1680px;
+    top: 0;
+    position: sticky;
+    z-index: 999;
+    height: 60px
+}
+
+.nav {
+    background-color: #fff;
+    transition: .3ms
+}
+
+.nav img {
+    height: 40px;
+    width: auto;
+    justify-self: start;
+    margin-left: 20px
+}
+
+.nav,
+.nav .nav-links {
+    display: flex;
+    align-items: center
+}
+
+.nav {
+    justify-content: space-between
+}
+
+a {
+    color: #333;
+    text-decoration: none
+}
+
+.nav .logo {
+    font-size: 22px;
+    font-weight: 500
+}
+
+.nav .nav-links {
+    column-gap: 20px;
+    list-style: none
+}
+
+.nav .nav-links a {
+    transition: all .2s linear
+}
+
+.nav.openSearch .nav-links a {
+    opacity: 0;
+    pointer-events: none
+}
+
+/* ICONS */
+.nav-helpful-links {
+    justify-content: space-between;
+    display: flex;
+    align-items: center
+}
+
+.nav-helpful-links .link {
+    margin: 0 5px;
+    text-align: center;
+    width: 45px
+}
+
+.nav-helpful-links .link:hover {
+    transition: .3ms;
+    cursor: pointer;
+    color: #555
+}
+
+.nav-helpful-links .link i {
+    font-size: 26px;
+    font-weight: 500
+}
+
+.nav-helpful-links .link p {
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center
+}
+
+@media screen and (max-width: 1300px) {
+    .nav .nav-links {
+        column-gap: 2px;
+        list-style: none
+    }
+}
+
+@media screen and (max-width: 920px) {
+    .mobile-menu {
+        display: block;
+        font-size: 26px;
+        font-weight: 500;
+        padding: 10px;
+        background-color: transparent;
+        border: none;
+        cursor: pointer
+    }
+
+    .mobile-menu-overlay {
+        height: 0;
+        width: 100%;
+        position: fixed;
+        left: 0;
+        top: 0;
+        background-color: rgb(240, 240, 240);
+        overflow-x: hidden;
+        transition: .5s
+    }
+
+    .nav .nav-links {
+        position: relative;
+        top: 25%;
+        width: 100%;
+        text-align: center;
+        margin-top: 30px;
+        flex-flow: column
+    }
+
+    .mobile-menu-close {
+        display: flex;
+        margin-left: auto;
+        padding: 10px;
+        background-color: transparent;
+        font-size: 3rem;
+        border: none;
+        cursor: pointer
+    }
+}
